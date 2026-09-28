@@ -1,0 +1,74 @@
+/* blog.css — trang liệt kê tin tức demo (layout tham khảo ICT Saigon /tin-tuc) */
+.blog-layout { display: grid; grid-template-columns: 1fr 300px; gap: 24px; padding-bottom: 30px; }
+.post-featured { border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: #fff; margin-bottom: 20px; }
+.post-featured .ph { height: 300px; font-size: 22px; }
+.post-featured .body { padding: 18px 20px 20px; }
+.post-meta { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--color-muted); margin: 8px 0 10px; }
+.post-meta .cat { color: var(--color-primary-darker); font-weight: 700; text-transform: uppercase; font-size: 11px; }
+.post-featured h2 { font-size: 22px; line-height: 1.35; }
+.post-featured h2 a:hover, .post-card h3 a:hover { color: var(--color-primary-darker); }
+.post-featured p { font-size: 13px; color: #555; margin-bottom: 12px; }
+.post-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.post-card { border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.post-card .ph { height: 160px; }
+.post-card .body { padding: 14px 15px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.post-card h3 { font-size: 14px; line-height: 1.45; }
+.post-card p { font-size: 12px; color: #666; flex: 1; }
+.read-more { font-size: 12px; font-weight: 700; color: var(--color-primary-darker); text-transform: uppercase; }
+.read-more:hover { text-decoration: underline; }
+.pager { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pager a, .pager span.cur { min-width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--color-border); border-radius: var(--radius-xs); font-size: 13px; background: #fff; }
+.pager span.cur { background: var(--color-dark); color: #fff; border-color: var(--color-dark); font-weight: 700; }
+.pager a:hover { border-color: var(--color-accent); }
+.blog-side { display: flex; flex-direction: column; gap: 20px; }
+.side-box { border: 1px solid var(--color-border); border-radius: var(--radius); background: #fff; padding: 16px; }
+.side-box h2 { font-size: 14px; text-transform: uppercase; margin-bottom: 12px; padding-left: 10px; border-left: 4px solid var(--color-accent); }
+.side-feature .ph { height: 130px; border-radius: var(--radius-xs); margin-bottom: 10px; }
+.side-feature h3 { font-size: 13px; line-height: 1.5; }
+.side-list { display: grid; gap: 12px; }
+.side-list a { display: grid; grid-template-columns: 72px 1fr; gap: 10px; align-items: center; }
+.side-list .ph { height: 56px; font-size: 11px; border-radius: var(--radius-xs); }
+.side-list h3 { font-size: 12px; font-weight: 600; line-height: 1.45; }
+.side-list time { font-size: 11px; color: var(--color-muted); }
+.side-cats { display: grid; gap: 8px; font-size: 13px; }
+.side-cats a { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--color-border); padding-bottom: 8px; }
+.side-cats a:hover { color: var(--color-primary-darker); }
+.side-cats small { color: var(--color-muted); }
+.author-box { display: grid; grid-template-columns: 72px 1fr; gap: 14px; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg-soft); padding: 16px; margin-top: 24px; }
+.author-box .ph { height: 72px; border-radius: 50%; font-size: 20px; }
+.author-box h3 { font-size: 14px; }
+.author-box p { font-size: 12px; color: #555; }
+/* biến thể: masonry */
+.masonry { columns: 3; column-gap: 16px; }
+.masonry .post-card { break-inside: avoid; margin-bottom: 16px; }
+/* biến thể: sidebar trái */
+.blog-layout--left { grid-template-columns: 300px 1fr; }
+.blog-layout--left main { order: 2; }
+.blog-layout--left aside { order: 1; }
+/* biến thể: list hàng ngang */
+.post-list { display: grid; gap: 16px; }
+.post-row { display: grid; grid-template-columns: 240px 1fr; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: #fff; }
+.post-row .ph { height: 100%; min-height: 170px; }
+.post-row .body { padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+.post-row h3 { font-size: 16px; line-height: 1.4; }
+.post-row h3 a:hover { color: var(--color-primary-darker); }
+.post-row p { font-size: 13px; color: #555; }
+@media (max-width: 900px) {
+  .masonry { columns: 2; }
+  .blog-layout--left { grid-template-columns: 1fr; }
+  .blog-layout--left main { order: 1; }
+  .blog-layout--left aside { order: 2; }
+}
+@media (max-width: 560px) {
+  .masonry { columns: 1; }
+  .post-row { grid-template-columns: 1fr; }
+  .post-row .ph { min-height: 150px; }
+}
+@media (max-width: 900px) {
+  .blog-layout { grid-template-columns: 1fr; }
+  .post-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .post-featured .ph { height: 200px; }
+}

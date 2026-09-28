@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Câu hỏi thường gặp — SEOVN demo</title>
+  <meta name="description" content="FAQs: đặt hàng, vận chuyển, bảo hành đổi trả, thanh toán và tài khoản." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/pages-info.css" />
+  <link rel="stylesheet" href="assets/css/elements/accordion.css" />
+  <style>.demo-note{background:#fff8e6;border-bottom:1px solid #f0dfae;padding:10px 15px;font-size:13px;text-align:center}</style>
+</head>
+<body>
+<script src="assets/js/site-nav.js"></script>
+<div class="demo-note">Trang <b>FAQs</b> — accordion nhóm theo chủ đề, tái dùng <code>.el-acc</code>. <a href="index.html">&larr; demo home</a></div>
+
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Trang chủ</a><span class="sep">›</span><span>FAQs</span>
+  </nav>
+
+  <header class="page-head">
+    <h1>Câu hỏi thường gặp</h1>
+    <p class="lead">Không thấy câu trả lời? Gọi <a style="font-weight:700;color:var(--color-primary-darker)" href="tel:0915426099">0915 426 099</a> hoặc <a style="font-weight:700;color:var(--color-primary-darker)" href="contact.html">gửi yêu cầu →</a></p>
+  </header>
+
+  <nav class="faq-nav"><a href="#dat-hang">Đặt hàng</a><a href="#van-chuyen">Vận chuyển</a><a href="#bao-hanh">Bảo hành & đổi trả</a><a href="#thanh-toan">Thanh toán & tài khoản</a></nav>
+
+  <div class="faq-group" id="dat-hang">
+    <h2>Đặt hàng</h2>
+    <div class="el-acc">
+      <details open><summary>Làm sao biết phụ tùng có vừa xe của tôi?</summary><div class="el-acc__body">Nhập hãng · dòng xe · đời xe ở bộ lọc, hoặc gửi số VIN / cà vẹt qua form liên hệ — kỹ thuật viên xác nhận mã trước khi giao.</div></details>
+      <details><summary>Đặt hàng cần tạo tài khoản không?</summary><div class="el-acc__body">Không bắt buộc. Đặt nhanh chỉ cần tên + số điện thoại; tạo tài khoản để theo dõi đơn, tích điểm và bảo hành điện tử.</div></details>
+      <details><summary>Muốn mua số lượng lớn cho garage / đội xe?</summary><div class="el-acc__body">Liên hệ phòng B2B <a href="tel:0906652739">0906 652 739</a> để nhận báo giá chiết khấu theo tháng và công nợ.</div></details>
+    </div>
+  </div>
+
+  <div class="faq-group" id="van-chuyen">
+    <h2>Vận chuyển</h2>
+    <div class="el-acc">
+      <details><summary>Phí ship và thời gian giao hàng?</summary><div class="el-acc__body">Nội thành TP.HCM/Hà Nội: 2–4 giờ, phí 20.000–40.000đ (free đơn từ 500.000đ). Tỉnh thành: 24–72 giờ qua đối tác vận chuyển.</div></details>
+      <details><summary>Được kiểm hàng trước khi thanh toán?</summary><div class="el-acc__body">Có. Kiểm tra mã, ngoại quan và tem bảo hành trước khi nhận; từ chối nhận nếu sai mã mà không mất phí.</div></details>
+      <details><summary>Hàng cồng kềnh (cản, capo, lốp) giao thế nào?</summary><div class="el-acc__body">Đóng khung gỗ / bọc xốp 2 lớp, giao xe tải trong nội thành; tỉnh thành gửi chành xe theo yêu cầu, phí báo trước khi chốt đơn.</div></details>
+    </div>
+  </div>
+
+  <div class="faq-group" id="bao-hanh">
+    <h2>Bảo hành & đổi trả</h2>
+    <div class="el-acc">
+      <details><summary>Chính sách đổi trả khi giao sai / lỗi?</summary><div class="el-acc__body">Đổi mới trong 7 ngày nếu sai mã do shop hoặc lỗi nhà sản xuất — shop chịu phí 2 chiều. Hàng điện (ECU, cảm biến) chỉ đổi khi chưa câu điện.</div></details>
+      <details><summary>Bảo hành phụ tùng bao lâu?</summary><div class="el-acc__body">6–24 tháng tùy nhóm hàng, kích hoạt bảo hành điện tử bằng số điện thoại. Chi tiết tem bảo hành kèm theo mỗi sản phẩm.</div></details>
+      <details><summary>Lắp tại garage ngoài có mất bảo hành?</summary><div class="el-acc__body">Không, miễn là lắp đúng quy trình và giữ hóa đơn lắp đặt. Lỗi do lắp sai kỹ thuật không thuộc phạm vi bảo hành sản phẩm.</div></details>
+    </div>
+  </div>
+
+  <div class="faq-group" id="thanh-toan">
+    <h2>Thanh toán & tài khoản</h2>
+    <div class="el-acc">
+      <details><summary>Chấp nhận những hình thức thanh toán nào?</summary><div class="el-acc__body">COD, chuyển khoản, thẻ ATM/Visa/Master, ví điện tử và trả góp 0% cho đơn từ 3 triệu qua thẻ tín dụng.</div></details>
+      <details><summary>Quên mật khẩu tài khoản thì sao?</summary><div class="el-acc__body">Bấm “Quên mật khẩu” ở trang đăng nhập, nhập số điện thoại để nhận mã OTP đặt lại trong 1 phút.</div></details>
+      <details><summary>Điểm tích lũy dùng để làm gì?</summary><div class="el-acc__body">1 điểm = 1.000đ trừ trực tiếp vào đơn sau; 500 điểm đổi voucher thay nhớt miễn phí công tại showroom.</div></details>
+    </div>
+  </div>
+
+  <footer class="info-foot">
+    <div><h3>SEOVN demo</h3><ul><li>123 Xa Lộ Hà Nội, TP. Thủ Đức, TP.HCM</li><li><a class="hotline" href="tel:0915426099">0915 426 099</a></li><li>08h00 – 17h30 (T2 – T7)</li></ul></div>
+    <div><h3>Thông tin</h3><ul><li><a href="about.html">Giới thiệu</a></li><li><a href="contact.html">Liên hệ</a></li><li><a href="privacy.html">Chính sách bảo mật</a></li></ul></div>
+    <div><h3>Hỗ trợ</h3><ul><li><a href="index.html">Trang chủ demo</a></li><li><a href="blog.html">Tin tức</a></li></ul></div>
+  </footer>
+</div>
+</body>
+</html>
