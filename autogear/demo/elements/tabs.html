@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabs — Flatsome element (tĩnh)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/elements/tabs.css" />
+  <style>.demo-note{background:#fff8e6;border-bottom:1px solid #f0dfae;padding:10px 15px;font-size:13px;text-align:center}.el-h{font-size:15px;font-weight:700;margin:22px 0 10px}</style>
+</head>
+<body>
+  <script src="../assets/js/site-nav.js"></script>
+  <div class="demo-note">Element <b>Tabs</b> — Flatsome: <code>[tabgroup] / [tab]</code>. <a href="../elements.html">&larr; elements</a></div>
+  <!-- PORT: [tabgroup title="..."] [tab title="Tab 1"]... -->
+  <div class="container" style="padding:30px 15px;max-width:900px">
+    <div class="el-h">Tabs ngang</div>
+    <div class="el-tabs" data-el-tabs>
+      <div class="el-tabs__nav"><button class="active" data-eltab="t1">Mô tả</button><button data-eltab="t2">Thông số</button><button data-eltab="t3">Đánh giá</button></div>
+      <div class="el-tabs__pane active" id="t1"><p>Nội dung mô tả sản phẩm...</p></div>
+      <div class="el-tabs__pane" id="t2"><p>Bảng thông số kỹ thuật...</p></div>
+      <div class="el-tabs__pane" id="t3"><p>Đánh giá của khách hàng...</p></div>
+    </div>
+    <div class="el-h">Tabs dọc</div>
+    <div class="el-tabs el-tabs--vertical" data-el-tabs>
+      <div class="el-tabs__nav"><button class="active" data-eltab="v1">Tab 1</button><button data-eltab="v2">Tab 2</button></div>
+      <div class="el-tabs__pane active" id="v1"><p>Nội dung tab dọc 1...</p></div>
+      <div class="el-tabs__pane" id="v2"><p>Nội dung tab dọc 2...</p></div>
+    </div>
+  </div>
+  <script src="../assets/js/elements.js"></script>
+</body>
+</html>

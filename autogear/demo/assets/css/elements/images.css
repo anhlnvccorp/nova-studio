@@ -1,0 +1,8 @@
+/* images.css — Flatsome [ux_image]: hover, lightbox */
+.el-imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.el-img { border-radius: var(--radius); overflow: hidden; display: block; }
+.el-img .ph { height: 200px; transition: transform .5s ease; }
+.el-img--zoom:hover .ph { transform: scale(1.07); }
+.el-img--round .ph { border-radius: var(--radius-full); height: 160px; }
+.el-img--frame { border: 1px solid var(--color-border); padding: 6px; background: #fff; }
+@media (max-width: 768px) { .el-imgs { grid-template-columns: 1fr; } }

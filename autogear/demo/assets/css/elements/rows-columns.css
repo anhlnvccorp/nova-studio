@@ -1,0 +1,10 @@
+/* rows-columns.css — Flatsome [row]/[col]: 1-6 cols, gap, valign */
+.el-row { display: grid; gap: 15px; margin-bottom: 20px; }
+.el-row--1 { grid-template-columns: 1fr; } .el-row--2 { grid-template-columns: 1fr 1fr; }
+.el-row--3 { grid-template-columns: repeat(3, 1fr); } .el-row--4 { grid-template-columns: repeat(4, 1fr); }
+.el-row--6 { grid-template-columns: repeat(6, 1fr); }
+.el-row--narrow { gap: 6px; } .el-row--wide { gap: 30px; }
+.el-row--mid { align-items: center; } .el-row--bottom { align-items: end; }
+.el-col { background: var(--color-bg-soft); border-radius: var(--radius); padding: 20px 10px; text-align: center; font-weight: 600; min-height: 70px; display: flex; align-items: center; justify-content: center; }
+.el-col--tall { min-height: 130px; } .el-col--short { min-height: 44px; }
+@media (max-width: 768px) { .el-row--3, .el-row--4, .el-row--6 { grid-template-columns: 1fr 1fr; } }

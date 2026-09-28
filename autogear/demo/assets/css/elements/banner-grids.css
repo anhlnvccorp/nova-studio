@@ -1,0 +1,7 @@
+/* banner-grids.css — Flatsome [ux_banner_grid] */
+.el-bgrid { display: grid; gap: 15px; margin-bottom: 20px; }
+.el-bgrid--2 { grid-template-columns: 1fr 1fr; }
+.el-bgrid--3 { grid-template-columns: repeat(3, 1fr); }
+.el-bgrid--4 { grid-template-columns: repeat(4, 1fr); }
+.el-bgrid .ph { height: 180px; border-radius: var(--radius); font-size: 18px; }
+@media (max-width: 768px) { .el-bgrid--3, .el-bgrid--4 { grid-template-columns: 1fr 1fr; } .el-bgrid--2 { grid-template-columns: 1fr; } }

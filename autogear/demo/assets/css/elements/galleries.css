@@ -1,0 +1,8 @@
+/* galleries.css — Flatsome [ux_gallery]: grid/masonry */
+.el-gal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.el-gal .ph { height: 150px; border-radius: var(--radius-sm); cursor: zoom-in; }
+.el-gal--masonry { grid-template-columns: repeat(3, 1fr); }
+.el-gal--masonry .ph:nth-child(3n+1) { height: 220px; }
+.el-gal--masonry .ph:nth-child(3n+2) { height: 150px; }
+.el-gal--masonry .ph:nth-child(3n) { height: 185px; }
+@media (max-width: 768px) { .el-gal { grid-template-columns: 1fr 1fr; } }

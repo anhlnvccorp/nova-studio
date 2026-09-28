@@ -1,0 +1,4 @@
+/* instagram-feed.css — Flatsome [ux_instagram_feed] */
+.el-ig { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.el-ig .ph { height: 120px; border-radius: var(--radius-sm); font-size: 20px; }
+@media (max-width: 900px) { .el-ig { grid-template-columns: repeat(3, 1fr); } }

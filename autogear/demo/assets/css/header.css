@@ -1,0 +1,30 @@
+/* ============ header.css ============ * Component: topbar + main header + nav */
+.topbar { background: var(--color-darker); color: #bbb; font-size: 12px; }
+.topbar__inner { display: flex; justify-content: space-between; align-items: center; height: 36px; }
+.topbar a:hover { color: #fff; }
+.topbar__right { display: flex; gap: 15px; }
+.header-main { background: var(--color-dark); color: #fff; }
+.header-main__inner { display: flex; align-items: center; gap: 25px; padding: 18px 15px; }
+.logo { font-size: 26px; font-weight: 800; letter-spacing: 1px; }
+.logo span { color: var(--color-accent); }
+.search { flex: 1; display: flex; }
+.search input { flex: 1; padding: 11px 14px; border: 0; border-radius: var(--radius-sm) 0 0 var(--radius-sm); font-size: 13px; }
+.search button { padding: 0 20px; border: 0; background: var(--color-accent); color: var(--color-on-primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; cursor: pointer; font-weight: 700; }
+.header-hotline { text-align: right; font-size: 12px; color: #bbb; }
+.header-hotline strong { display: block; font-size: 17px; color: var(--color-gold); }
+.header-icons { display: flex; gap: 12px; }
+.header-icons a { position: relative; font-size: 13px; }
+.cart-count { background: var(--color-accent); color: var(--color-on-primary); border-radius: 50%; font-size: 11px; padding: 1px 6px; margin-left: 4px; }
+.nav { background: var(--color-accent); }
+.nav__inner { display: flex; gap: 5px; align-items: center; }
+.nav a { color: var(--color-on-primary); font-weight: 600; font-size: 13px; text-transform: uppercase; padding: 13px 16px; display: block; }
+.nav a:hover { background: rgba(0,0,0,.15); }
+.nav__toggle { display: none; background: none; border: 0; color: var(--color-on-primary); font-size: 22px; padding: 10px 15px; cursor: pointer; }
+@media (max-width: 900px) {
+  .header-main__inner { flex-wrap: wrap; }
+  .search { order: 3; flex-basis: 100%; }
+  .header-hotline { display: none; }
+  .nav__inner { display: none; flex-direction: column; align-items: stretch; }
+  .nav.open .nav__inner { display: flex; }
+  .nav__toggle { display: block; }
+}

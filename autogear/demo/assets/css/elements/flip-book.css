@@ -1,0 +1,8 @@
+/* flip-book.css — custom JS lật sách 3D */
+.el-book { perspective: 1400px; max-width: 520px; margin: 0 auto 16px; }
+.el-pages3d { position: relative; height: 340px; transform-style: preserve-3d; }
+.el-page { position: absolute; inset: 0; background: #fff; border: 1px solid var(--color-border); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: 800; backface-visibility: hidden; transition: transform .7s ease; transform-origin: left center; }
+.el-page:nth-child(odd) { background: linear-gradient(135deg, #2b2f38, #4a4f5c); color: #fff; }
+.el-page:nth-child(even) { background: #f5f6f8; color: #555; }
+.el-page.flipped { transform: rotateY(-180deg); }
+.el-book__nav { display: flex; gap: 10px; justify-content: center; }

@@ -1,0 +1,11 @@
+/* price-table.css — Flatsome [price_table] */
+.el-prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; align-items: stretch; }
+.el-price { border: 1px solid var(--color-border); border-radius: var(--radius); text-align: center; padding: 26px 18px; background: #fff; }
+.el-price--hot { border: 2px solid var(--color-primary-dark); position: relative; }
+.el-price__tag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: var(--color-on-primary); font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 3px 14px; border-radius: var(--radius-full); white-space: nowrap; }
+.el-price h4 { text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+.el-price__num { font-size: 34px; font-weight: 800; margin: 10px 0; }
+.el-price__num small { font-size: 13px; color: var(--color-muted); font-weight: 400; }
+.el-price ul { margin: 14px 0 20px; font-size: 13px; color: #555; }
+.el-price li { padding: 6px 0; border-top: 1px dashed var(--color-border); }
+@media (max-width: 768px) { .el-prices { grid-template-columns: 1fr; } }

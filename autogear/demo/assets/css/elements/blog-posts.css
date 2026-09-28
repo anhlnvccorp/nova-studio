@@ -1,0 +1,9 @@
+/* blog-posts.css — Flatsome [blog_posts]: grid/slider */
+.el-posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.el-post { border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: #fff; }
+.el-post .ph { height: 170px; }
+.el-post__body { padding: 14px; }
+.el-post__meta { font-size: 12px; color: var(--color-muted); }
+.el-post h4 { font-size: 15px; margin: 6px 0; }
+.el-post p { font-size: 13px; color: #555; }
+@media (max-width: 900px) { .el-posts { grid-template-columns: 1fr; } }

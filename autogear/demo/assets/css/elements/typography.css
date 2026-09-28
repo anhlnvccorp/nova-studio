@@ -1,0 +1,8 @@
+/* typography.css — Flatsome [ux_text] */
+.el-type h1 { font-size: 36px; } .el-type h2 { font-size: 30px; } .el-type h3 { font-size: 24px; }
+@media (max-width: 560px) { .el-type h1 { font-size: 28px; } .el-type h2 { font-size: 24px; } }
+.el-type h4 { font-size: 20px; } .el-type h5 { font-size: 17px; } .el-type h6 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+.el-type h1, .el-type h2, .el-type h3, .el-type h4, .el-type h5, .el-type h6 { margin: 14px 0 8px; }
+.el-lead { font-size: 18px; color: #444; }
+.el-small { font-size: 12px; color: #777; }
+.el-quote { border-left: 4px solid var(--color-primary); padding: 10px 16px; background: var(--color-bg-soft); font-style: italic; margin: 16px 0; }

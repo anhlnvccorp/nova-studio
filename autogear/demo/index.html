@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEOVN — Homepage demo6 (từ elements + header dùng chung)</title>
+  <meta name="description" content="Homepage clone demo6 SW Autusin, dựng từ elements tĩnh + header-main morph dùng chung." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- COMPONENT CSS: base + homepage (hero/sections/footer) + elements dùng lại -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/elements/sliders.css" />
+  <link rel="stylesheet" href="assets/css/elements/icon-box.css" />
+  <link rel="stylesheet" href="assets/css/elements/banners.css" />
+  <link rel="stylesheet" href="assets/css/elements/product-categories.css" />
+  <link rel="stylesheet" href="assets/css/elements/products.css" />
+  <link rel="stylesheet" href="assets/css/elements/countdown.css" />
+</head>
+<body>
+<script src="assets/js/site-nav.js"></script>
+
+  <!-- ===== HERO: el-slider autoplay + progress (elements/sliders) + vehicle filter ===== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="el-slider" data-el-slider data-auto="5000">
+        <div class="sw-circle-prg"><svg class="progress-svg" viewBox="0 0 48 48"><circle class="progress-bg" cx="24" cy="24" r="22"></circle><circle class="progress-bar" cx="24" cy="24" r="22"></circle></svg><span class="pagination-number">1</span></div>
+        <div class="el-slide active" style="background:linear-gradient(90deg,#14161c 40%,#3a2c1a)"><div><h2 style="font-size:32px;text-transform:uppercase">Auto Parts <span style="color:var(--color-primary)">Up to 50% Off</span></h2><p style="color:#ccc;margin:10px 0 18px">Hundreds of brands, tens of thousands of parts.</p><a class="btn" href="#shop">Shop Now</a></div></div>
+        <div class="el-slide" style="background:linear-gradient(90deg,#14161c 40%,#12303a)"><div><h2 style="font-size:32px;text-transform:uppercase">Wheels &amp; Tires <span style="color:var(--color-primary)">New Arrival</span></h2><p style="color:#ccc;margin:10px 0 18px">Free shipping on orders above $100.</p><a class="btn" href="#shop">Shop Now</a></div></div>
+        <button class="el-arrow el-prev" aria-label="Trước">‹</button>
+        <button class="el-arrow el-next" aria-label="Sau">›</button>
+        <div class="el-dots"></div>
+      </div>
+      <aside class="vehicle">
+        <h3>Find Parts for your vehicle</h3>
+        <p>Over hundreds of brands and tens of thousands of parts</p>
+        <form id="vehicleForm">
+          <select id="vMaker"></select>
+          <select id="vModel"><option>Select Model</option></select>
+          <select id="vYear"><option>Select Year</option></select>
+          <button type="submit">Search</button>
+        </form>
+      </aside>
+    </div>
+    <!-- ===== USP: icon-box (elements/icon-box) + banners (elements/banners) ===== -->
+    <div class="container" style="margin-top:20px">
+      <div class="el-iboxes">
+        <div class="el-ibox el-ibox--left"><div class="el-ibox__icon--circle">🚚</div><div><h4>Free Shipping</h4><p>Orders above $100</p></div></div>
+        <div class="el-ibox el-ibox--left"><div class="el-ibox__icon--circle">↩️</div><div><h4>7 Days Return</h4><p>Immediate exchange</p></div></div>
+        <div class="el-ibox el-ibox--left"><div class="el-ibox__icon--circle">🎧</div><div><h4>24/7 Support</h4><p>7 days a week</p></div></div>
+      </div>
+      <div class="el-grid-2" style="margin-top:15px">
+        <div class="el-banner"><div class="el-banner__bg">SALE</div><div class="el-banner__text"><h3>Accessories Sale</h3><a class="btn" href="#shop">Shop now</a></div></div>
+        <div class="el-banner el-banner--right"><div class="el-banner__bg">NEW</div><div class="el-banner__text"><h3>Engine Parts</h3><a class="btn" href="#shop">Shop now</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR CATEGORIES: sw-cat-slider responsive (elements/product-categories) ===== -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="sw-cat-slider" data-el-resp data-lg="5" data-md="4" data-sm="3" data-xs="2" data-mobile="2" style="margin-top:0">
+        <div class="box-title"><h3>Popular Categories</h3><div class="box-nav"><button data-rprev aria-label="Trước">‹</button><button data-rnext aria-label="Sau">›</button></div></div>
+        <div class="resp-viewport"><div class="resp-track" data-el-track>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">🔌</div></div><div class="item-content"><h3>Electronics</h3><p>8 products</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">💡</div></div><div class="item-content"><h3>Lighting</h3><p>9 products</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">🔧</div></div><div class="item-content"><h3>Repair Parts</h3><p>9 products</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">🛞</div></div><div class="item-content"><h3>Wheels &amp; Tires</h3><p>1 product</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">⚙️</div></div><div class="item-content"><h3>Engine</h3><p>2 products</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">🧰</div></div><div class="item-content"><h3>Tools</h3><p>2 products</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">🚗</div></div><div class="item-content"><h3>Body Parts</h3><p>2 products</p></div></div></div>
+          <div class="item"><div class="item-wrap"><div class="item-image"><div class="ph">🏁</div></div><div class="item-content"><h3>Performance</h3><p>7 products</p></div></div></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS: product-item (elements/products) ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">Featured Products</h2></div>
+      <div class="el-products">
+        <div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">SP 1</div><div class="hover-image ph ph--light">SP 1b</div></a><div class="product-actions"><button class="btn-action" title="Quick View">👁</button><button class="btn-action" title="Wishlist">♡</button><button class="btn-action" title="Compare">⇄</button></div></div><div class="product-info"><h4 class="product-title"><a href="#">Emodix ea co modim Nemo enim</a></h4><div class="product-rating"><div class="stars"><span style="width:65%"></span></div></div><div class="product-bottom"><span class="product-price">$70.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><span class="p-card__badge">-11%</span><a href="#"><div class="main-image ph">SP 2</div><div class="hover-image ph ph--light">SP 2b</div></a><div class="product-actions"><button class="btn-action" title="Quick View">👁</button><button class="btn-action" title="Wishlist">♡</button><button class="btn-action" title="Compare">⇄</button></div></div><div class="product-info"><h4 class="product-title"><a href="#">Saotam rem aperiam tem</a></h4><div class="product-rating"><div class="stars"><span style="width:80%"></span></div></div><div class="product-bottom"><span class="product-price"><del>$79.00</del>$70.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><span class="p-card__badge">-29%</span><a href="#"><div class="main-image ph">SP 3</div><div class="hover-image ph ph--light">SP 3b</div></a><div class="product-actions"><button class="btn-action" title="Quick View">👁</button><button class="btn-action" title="Wishlist">♡</button><button class="btn-action" title="Compare">⇄</button></div></div><div class="product-info"><h4 class="product-title"><a href="#">Ut enim ad mini</a></h4><div class="product-rating"><div class="stars"><span style="width:100%"></span></div></div><div class="product-bottom"><span class="product-price"><del>$70.00</del>$50.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">SP 4</div><div class="hover-image ph ph--light">SP 4b</div></a><div class="product-actions"><button class="btn-action" title="Quick View">👁</button><button class="btn-action" title="Wishlist">♡</button><button class="btn-action" title="Compare">⇄</button></div></div><div class="product-info"><h4 class="product-title"><a href="#">Perspiciatis unde omnis</a></h4><div class="product-rating"><div class="stars"><span style="width:40%"></span></div></div><div class="product-bottom"><span class="product-price">$50.00 – $70.00</span><button class="btn-add-to-cart">Select options</button></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPECIAL DEALS: countdown (elements/countdown) ===== -->
+  <section class="section deals">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">Special Deals</h2></div>
+      <p class="deals__sub">Hurry up! Discount up to 50%</p>
+      <div class="el-cd el-cd--primary" data-el-countdown style="max-width:420px"><div><strong data-d>00</strong><small>Days</small></div><div><strong data-h>00</strong><small>Hours</small></div><div><strong data-m>00</strong><small>Mins</small></div><div><strong data-s>00</strong><small>Secs</small></div></div>
+      <div class="h-slider" style="margin-top:20px">
+        <div class="product-item"><div class="product-thumb"><span class="p-card__badge">-50%</span><a href="#"><div class="main-image ph">D1</div><div class="hover-image ph ph--light">D1b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Aatus error sit voluptatem</a></h4><div class="product-rating"><div class="stars"><span style="width:90%"></span></div></div><div class="product-bottom"><span class="product-price"><del>$200.00</del>$100.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><span class="p-card__badge">-32%</span><a href="#"><div class="main-image ph">D2</div><div class="hover-image ph ph--light">D2b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Rtam rem aperiam eaque</a></h4><div class="product-rating"><div class="stars"><span style="width:75%"></span></div></div><div class="product-bottom"><span class="product-price"><del>$88.00</del>$60.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><span class="p-card__badge">-20%</span><a href="#"><div class="main-image ph">D3</div><div class="hover-image ph ph--light">D3b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Aad minima veniami</a></h4><div class="product-rating"><div class="stars"><span style="width:70%"></span></div></div><div class="product-bottom"><span class="product-price"><del>$75.00</del>$60.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">Auto Parts by Make</h2></div>
+      <div class="brand-row">
+        <div class="brand-item"><div class="ph">B</div>Bolloré</div>
+        <div class="brand-item"><div class="ph">D</div>Daimler</div>
+        <div class="brand-item"><div class="ph">G</div>Gurgel</div>
+        <div class="brand-item"><div class="ph">H</div>Heinkel</div>
+        <div class="brand-item"><div class="ph">H</div>HSV</div>
+        <div class="brand-item"><div class="ph">L</div>LDV</div>
+        <div class="brand-item"><div class="ph">M</div>Magna Steyr</div>
+        <div class="brand-item"><div class="ph">M</div>Mahindra</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORY TABS (tabs elements.js: data-el-tabs) ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="cat-tabs-block" data-el-tabs>
+        <div class="cat-tabs-block__head"><h3>Wheels &amp; Tires</h3>
+          <div class="tabs"><button class="active" data-eltab="wt-best">Best Selling</button><button data-eltab="wt-top">Top Rating</button><button data-eltab="wt-feat">Featured</button></div>
+        </div>
+        <div class="cat-tabs-block__body">
+          <div class="cat-tabs-block__side"><ul><li>Accessories</li><li>Brake Kits</li><li>Tire Chains</li><li>Wheel Covers</li></ul><div class="ph">Banner</div></div>
+          <div class="cat-tabs-block__main">
+            <div class="tab-pane active" id="wt-best"><div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">W1</div><div class="hover-image ph ph--light">W1b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Auia voluptas sit as</a></h4><div class="product-bottom"><span class="product-price"><del>$110.00</del>$12.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div><div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">W2</div><div class="hover-image ph ph--light">W2b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">ASsa quae ab vitae</a></h4><div class="product-bottom"><span class="product-price">$100.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div></div>
+            <div class="tab-pane" id="wt-top"><div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">W3</div><div class="hover-image ph ph--light">W3b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Top rated wheel set</a></h4><div class="product-bottom"><span class="product-price">$88.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div></div>
+            <div class="tab-pane" id="wt-feat"><div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">W4</div><div class="hover-image ph ph--light">W4b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Featured tire combo</a></h4><div class="product-bottom"><span class="product-price">$95.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-tabs-block" data-el-tabs>
+        <div class="cat-tabs-block__head"><h3>Headlights &amp; Lightings</h3>
+          <div class="tabs"><button class="active" data-eltab="hl-latest">Latest</button><button data-eltab="hl-best">Best Selling</button></div>
+        </div>
+        <div class="cat-tabs-block__body">
+          <div class="cat-tabs-block__side"><ul><li>Back Up</li><li>Headlights</li><li>Switches</li><li>Relays</li></ul><div class="ph">Banner</div></div>
+          <div class="cat-tabs-block__main">
+            <div class="tab-pane active" id="hl-latest"><div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">H1</div><div class="hover-image ph ph--light">H1b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Sed ut perspiciatis</a></h4><div class="product-bottom"><span class="product-price">$60.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div><div class="product-item"><div class="product-thumb"><span class="p-card__badge">-50%</span><a href="#"><div class="main-image ph">H2</div><div class="hover-image ph ph--light">H2b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Aatus error sit</a></h4><div class="product-bottom"><span class="product-price"><del>$200.00</del>$100.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div></div>
+            <div class="tab-pane" id="hl-best"><div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">H3</div><div class="hover-image ph ph--light">H3b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Best headlight unit</a></h4><div class="product-bottom"><span class="product-price">$40.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEW ARRIVALS + BEST SELLERS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">New Arrivals</h2></div>
+      <div class="h-slider">
+        <div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">N1</div><div class="hover-image ph ph--light">N1b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Aeritatis et quasi architecto</a></h4><div class="product-bottom"><span class="product-price">$68.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">N2</div><div class="hover-image ph ph--light">N2b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">ASsa quae ab vitae dicta</a></h4><div class="product-bottom"><span class="product-price">$100.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+      </div>
+      <div class="section-head" style="margin-top:35px"><h2 class="section-title">Best Sellers</h2></div>
+      <div class="h-slider">
+        <div class="product-item"><div class="product-thumb"><span class="p-card__badge">-90%</span><a href="#"><div class="main-image ph">B1</div><div class="hover-image ph ph--light">B1b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Auia voluptas sit as</a></h4><div class="product-bottom"><span class="product-price"><del>$110.00</del>$12.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+        <div class="product-item"><div class="product-thumb"><a href="#"><div class="main-image ph">B2</div><div class="hover-image ph ph--light">B2b</div></a></div><div class="product-info"><h4 class="product-title"><a href="#">Aea e dictatae vite</a></h4><div class="product-bottom"><span class="product-price">$72.00</span><button class="btn-add-to-cart">Add to cart</button></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG ===== -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><h2 class="section-title">Car Magazines</h2></div>
+      <div class="blog-grid">
+        <article class="blog-card"><div class="ph">Blog 1</div><div class="blog-card__body"><small>Sep 26, 2026 — Tips</small><h4>Donec massa pellentesque placerat</h4></div></article>
+        <article class="blog-card"><div class="ph">Blog 2</div><div class="blog-card__body"><small>Sep 25, 2026 — Guides</small><h4>Duis aute irure dolor in reprehenderit</h4></div></article>
+        <article class="blog-card"><div class="ph">Blog 3</div><div class="blog-card__body"><small>Sep 24, 2026 — News</small><h4>Sunt in culpa qui officia deserunt</h4></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="section newsletter">
+    <div class="container newsletter__inner">
+      <div><h3>Sign Up For Newsletter</h3><p>Get 30% OFF on your first order</p></div>
+      <form id="newsletterForm"><input type="email" placeholder="Your email..." required /><button>Subscribe</button></form>
+      <div class="socials"><a href="#">f</a><a href="#">t</a><a href="#">ig</a><a href="#">p</a></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><h5>Get The App</h5><div class="ph" style="height:90px;border-radius:var(--radius)">APP BANNER</div></div>
+      <div><h5>Customer Service</h5><ul><li><a href="#">Contact Us</a></li><li><a href="#">About Us</a></li><li><a href="#">My Account</a></li><li><a href="#">Wishlist</a></li><li><a href="#">Checkout</a></li></ul></div>
+      <div class="footer__hours"><h5>Opening Hours</h5><div><span>Sale Hour</span><span>7am - 7pm</span></div><div><span>Service Hour</span><span>8am - 6pm</span></div></div>
+      <div><h5>Contact Info</h5><ul><li>Hotline: (+800) 123-4567</li><li>28 Watchung Ave, New Jersey</li><li>support@example.com</li></ul></div>
+    </div>
+    <div class="footer__bottom"><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><span>Copyright © 2026 SEOVN Demo</span><span>💳 PayPal / Visa / Master</span></div></div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/elements.js"></script>
+</body>
+</html>

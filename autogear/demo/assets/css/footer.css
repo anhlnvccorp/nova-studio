@@ -1,0 +1,14 @@
+/* ============ footer.css ============ * Component: footer */
+.footer { background: var(--color-darker); color: #bbb; font-size: 13px; }
+.footer__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 25px; padding: 45px 0 30px; }
+.footer h5 { color: #fff; text-transform: uppercase; font-size: 14px; margin-bottom: 14px; }
+.footer li { padding: 5px 0; }
+.footer a:hover { color: var(--color-gold); }
+.footer__hours div { display: flex; justify-content: space-between; border-bottom: 1px dashed #333; padding: 5px 0; }
+.footer__bottom { border-top: 1px solid #2a2d35; padding: 15px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 900px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer__grid { grid-template-columns: 1fr; }
+}

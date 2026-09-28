@@ -1,0 +1,13 @@
+/* banners.css — Flatsome [ux_banner]: hover zoom/overlay, vị trí text */
+.el-banner { position: relative; border-radius: var(--radius-md); overflow: hidden; min-height: 220px; display: flex; }
+.el-banner--tall { min-height: 320px; }
+.el-banner__bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 20px; background: linear-gradient(135deg, #2b2f38, #5a6070); transition: transform .5s ease; }
+.el-banner:hover .el-banner__bg { transform: scale(1.06); }
+.el-banner__text { position: relative; z-index: 1; color: #fff; padding: 30px; max-width: 70%; }
+.el-banner--center { align-items: center; justify-content: center; text-align: center; }
+.el-banner--right { justify-content: flex-end; text-align: right; }
+.el-banner__text h3 { font-size: 24px; text-transform: uppercase; margin-bottom: 8px; }
+.el-banner__text .btn { margin-top: 12px; }
+.el-banner--overlay::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.35); }
+.el-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+@media (max-width: 768px) { .el-grid-2 { grid-template-columns: 1fr; } }

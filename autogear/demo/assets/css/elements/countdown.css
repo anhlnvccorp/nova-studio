@@ -1,0 +1,7 @@
+/* countdown.css — Flatsome [ux_countdown] */
+.el-cd { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.el-cd div { background: var(--color-dark); color: #fff; border-radius: var(--radius); min-width: 70px; padding: 10px 4px; text-align: center; }
+.el-cd strong { display: block; font-size: 24px; }
+.el-cd small { font-size: 11px; text-transform: uppercase; color: #bbb; }
+.el-cd--primary div { background: var(--color-primary); color: var(--color-on-primary); }
+.el-cd--primary small { color: var(--color-primary-darker); }

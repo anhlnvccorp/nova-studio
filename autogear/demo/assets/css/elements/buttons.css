@@ -1,0 +1,11 @@
+/* buttons.css — Flatsome [button]: solid/outline, sizes */
+.el-btns { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; }
+.el-btn { display: inline-block; padding: 12px 28px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-transform: uppercase; border: 2px solid var(--color-primary); background: var(--color-primary); color: var(--color-on-primary); cursor: pointer; }
+.el-btn:hover { background: var(--color-primary-dark); border-color: var(--color-primary-dark); }
+.el-btn--sm { padding: 8px 18px; font-size: 12px; }
+.el-btn--lg { padding: 16px 40px; font-size: 15px; }
+.el-btn--outline { background: transparent; color: var(--color-primary-darker); border-color: var(--color-primary-dark); }
+.el-btn--outline:hover { background: var(--color-primary); color: var(--color-on-primary); border-color: var(--color-primary); }
+.el-btn--dark { background: var(--color-dark); border-color: var(--color-dark); }
+.el-btn--dark:hover { background: #000; border-color: #000; }
+.el-btn--round { border-radius: var(--radius-full); }

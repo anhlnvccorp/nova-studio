@@ -1,0 +1,4 @@
+/* scroll-to.css — Flatsome [scroll_to] */
+html { scroll-behavior: smooth; }
+.el-scroll-demo { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.el-scroll-target { border: 2px dashed var(--color-primary-dark); border-radius: var(--radius); padding: 40px 20px; text-align: center; margin-bottom: 16px; font-weight: 700; }

@@ -1,0 +1,16 @@
+/* sliders.css — Flatsome [ux_slider]: arrows/dots/autoplay */
+.el-slider { position: relative; border-radius: var(--radius-md); overflow: hidden; }
+.el-slide { display: none; min-height: 260px; align-items: center; justify-content: center; color: #fff; font-size: 26px; font-weight: 800; }
+.el-slide.active { display: flex; }
+.el-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); cursor: pointer; font-size: 18px; z-index: 2; }
+.el-prev { left: 12px; } .el-next { right: 12px; }
+.el-dots { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; gap: 8px; justify-content: center; }
+.el-dots button { width: 10px; height: 10px; border-radius: 50%; border: 0; background: rgba(255,255,255,.5); cursor: pointer; }
+.el-dots button.active { background: #fff; }
+/* vòng tròn progress autoplay 36px góc phải trên */
+.sw-circle-prg { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; z-index: 2; }
+.sw-circle-prg .progress-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.sw-circle-prg circle { fill: none; stroke-width: 4; }
+.sw-circle-prg .progress-bg { stroke: rgba(255,255,255,.35); }
+.sw-circle-prg .progress-bar { stroke: #fff; stroke-linecap: round; stroke-dasharray: 138.23; stroke-dashoffset: 138.23; }
+.sw-circle-prg .pagination-number { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; }

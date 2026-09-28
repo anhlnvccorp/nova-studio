@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Globals — Colors + Radius (primary #fdb819)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/colors.css" />
+  <style>.demo-note{background:#fff8e6;border-bottom:1px solid #f0dfae;padding:10px 15px;font-size:13px;text-align:center}</style>
+</head>
+<body>
+  <script src="assets/js/site-nav.js"></script>
+  <div class="demo-note">Tài liệu hệ global (<b>assets/css/global-colors.css</b>) kiểu CodyHouse Globals — Colors + Radius, primary <b>#fdb819</b>. <a href="index.html">← về index.html</a> · <a href="elements.html">elements</a></div>
+  <div class="container" style="padding:10px 15px 50px">
+    <div class="cl-head">
+      <h1>Globals</h1>
+      <div class="cl-theme"><span style="font-size:13px;color:#777">Theme:</span><button class="active" data-set-theme="default">Default</button><button data-set-theme="dark">Dark</button></div>
+    </div>
+    <p style="color:#777;font-size:13px">Đổi theme để xem nấc màu dark. Mỗi swatch: token + Hue/Sat/Light + hex render thực tế.</p>
+    <div id="clGroups"></div>
+  </div>
+  <script>
+  (function () {
+    "use strict";
+    /* DATA зеркалирует global-colors.css (default theme) */
+    var GROUPS = [
+      { title: "Main", desc: "Màu chính SEOVN + màu phụ CTA.", items: [
+        ["--color-primary-darker", 42, 85, 34], ["--color-primary-dark", 42, 92, 44],
+        ["--color-primary", 42, 98, 54], ["--color-primary-light", 42, 98, 63],
+        ["--color-primary-lighter", 42, 98, 72],
+        ["--color-accent-darker", 9, 78, 34], ["--color-accent-dark", 9, 82, 41],
+        ["--color-accent", 9, 85, 49], ["--color-accent-light", 9, 88, 58],
+        ["--color-accent-lighter", 9, 90, 67]
+      ]},
+      { title: "Black + White", items: [["--color-black", 230, 13, 9], ["--color-white", 0, 0, 100]] },
+      { title: "Feedback", items: [
+        ["--color-success-darker", 170, 78, 26], ["--color-success-dark", 170, 78, 31],
+        ["--color-success", 170, 78, 36], ["--color-success-light", 170, 78, 42],
+        ["--color-success-lighter", 170, 78, 47],
+        ["--color-error-darker", 342, 89, 38], ["--color-error-dark", 342, 89, 43],
+        ["--color-error", 342, 89, 48], ["--color-error-light", 342, 89, 56],
+        ["--color-error-lighter", 342, 89, 62],
+        ["--color-warning-darker", 35, 79, 48], ["--color-warning-dark", 35, 79, 56],
+        ["--color-warning", 35, 79, 66], ["--color-warning-light", 35, 79, 74],
+        ["--color-warning-lighter", 35, 79, 82]
+      ]},
+      { title: "Bg + Contrasts", items: [
+        ["--color-bg-darker", 240, 4, 90], ["--color-bg-dark", 240, 4, 95],
+        ["--color-bg", 0, 0, 100], ["--color-bg-light", 0, 0, 100], ["--color-bg-lighter", 0, 0, 100],
+        ["--color-contrast-lower", 240, 4, 85], ["--color-contrast-low", 240, 4, 65],
+        ["--color-contrast-medium", 225, 4, 47], ["--color-contrast-high", 230, 7, 23],
+        ["--color-contrast-higher", 230, 13, 9]
+      ]}
+    ];
+    function hslToHex(h, s, l) {
+      s /= 100; l /= 100;
+      var k = function (n) { return (n + h / 30) % 12; };
+      var a = s * Math.min(l, 1 - l);
+      var f = function (n) { return l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1))); };
+      var to = function (x) { return Math.round(x * 255).toString(16).padStart(2, "0"); };
+      return "#" + to(f(0)) + to(f(8)) + to(f(4));
+    }
+    var box = document.getElementById("clGroups");
+    GROUPS.forEach(function (g) {
+      var sec = document.createElement("section");
+      sec.className = "cl-group";
+      sec.innerHTML = "<h2>" + g.title + "</h2>" + (g.desc ? "<p>" + g.desc + "</p>" : "");
+      var grid = document.createElement("div");
+      grid.className = "cl-grid";
+      g.items.forEach(function (it) {
+        var name = it[0], h = it[1], s = it[2], l = it[3];
+        var d = document.createElement("div");
+        d.className = "cl-swatch";
+        d.innerHTML = '<div class="cl-chip" style="background:var(' + name + ')"></div>' +
+          '<div class="cl-meta"><code>' + name + '</code>' +
+          '<span class="cl-hex">' + hslToHex(h, s, l) + '</span> <span class="cl-hsl">hsl(' + h + ", " + s + "%, " + l + "%)</span>" +
+          '<div class="cl-hsl-row"><span><small>Hue</small>' + h + '</span><span><small>Sat %</small>' + s + '</span><span><small>Light %</small>' + l + '</span></div></div>';
+        grid.appendChild(d);
+      });
+      sec.appendChild(grid);
+      box.appendChild(sec);
+    });
+    /* Gradients */
+    var gs = document.createElement("section");
+    gs.className = "cl-group";
+    gs.innerHTML = '<h2>Gradients</h2><div class="cl-grid">' +
+      '<div class="cl-grad" style="background:linear-gradient(120deg,var(--color-primary),var(--color-accent));color:var(--color-on-primary)">--gradient-primary</div>' +
+      '<div class="cl-grad" style="background:linear-gradient(120deg,var(--color-primary-dark),var(--color-primary-light))">--gradient-primary-soft</div></div>';
+    box.appendChild(gs);
+    /* Radius */
+    var RADIUS = [["--radius-xs", "0"], ["--radius-sm", "0"], ["--radius", "0"], ["--radius-md", "0"], ["--radius-lg", "0"], ["--radius-full", "999px"]];
+    var rs = document.createElement("section");
+    rs.className = "cl-group";
+    var rh = "<h2>Radius</h2><p>Bo góc toàn site dùng biến này (50% giữ nguyên cho hình tròn).</p><div class=\"cl-radius-grid\">";
+    RADIUS.forEach(function (r) {
+      rh += '<div class="cl-radius-box" style="border-radius:var(' + r[0] + ')"><code>' + r[0] + " · " + r[1] + "</code></div>";
+    });
+    rs.innerHTML = rh + "</div>";
+    box.appendChild(rs);
+    /* Theme toggle */
+    document.querySelectorAll("[data-set-theme]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        document.documentElement.setAttribute("data-theme", b.getAttribute("data-set-theme"));
+        document.querySelectorAll("[data-set-theme]").forEach(function (x) { x.classList.remove("active"); });
+        b.classList.add("active");
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

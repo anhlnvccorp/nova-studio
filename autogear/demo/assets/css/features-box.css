@@ -1,0 +1,17 @@
+/* ============ features-box.css ============
+ * Component: features box (tiêu đề giữa + lưới 3 cards)
+ * Vanilla CSS theo cứng design đã cho (không Tailwind).
+ */
+.fb { max-width: 80rem; margin: 0 auto; padding: 2rem 1rem; }
+.fb__head { max-width: 32rem; margin: 0 auto; text-align: center; }
+.fb__title { font-size: 1.875rem; line-height: 1.25; font-weight: 700; color: #111827; }
+.fb__desc { margin-top: 1rem; font-size: 1.125rem; color: #374151; }
+.fb__grid { margin-top: 2rem; display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.fb-card { border: 1px solid #e5e7eb; border-radius: var(--radius-md); padding: 1.5rem; background: #fff; }
+.fb-card__icon { display: inline-flex; border-radius: var(--radius-md); background: #f3f4f6; padding: .75rem; color: #374151; }
+.fb-card__icon svg { width: 1.5rem; height: 1.5rem; }
+.fb-card__title { margin-top: 1rem; font-size: 1.125rem; font-weight: 600; color: #111827; }
+.fb-card__text { margin-top: .5rem; color: #374151; }
+@media (min-width: 640px) { .fb { padding-left: 1.5rem; padding-right: 1.5rem; } .fb__title { font-size: 2.25rem; } }
+@media (min-width: 768px) { .fb__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .fb { padding-left: 2rem; padding-right: 2rem; } }

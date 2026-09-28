@@ -1,0 +1,22 @@
+/* product-categories.css — Flatsome [ux_product_categories] */
+.el-pcats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.el-pcat { border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; text-align: center; background: #fff; }
+.el-pcat .ph { height: 140px; }
+.el-pcat h4 { padding: 10px 6px 2px; font-size: 14px; }
+.el-pcat small { color: var(--color-muted); display: block; padding-bottom: 10px; }
+@media (max-width: 900px) { .el-pcats { grid-template-columns: 1fr 1fr; } }
+/* slider responsive kiểu sw_woo_cat_slider theme10 (số cột theo data-lg/md/sm/xs/mobile) */
+.sw-cat-slider { margin-top: 34px; }
+.sw-cat-slider .box-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.sw-cat-slider .box-title h3 { font-size: 20px; text-transform: uppercase; }
+.sw-cat-slider .box-nav { display: flex; gap: 8px; }
+.sw-cat-slider .box-nav button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--color-border); background: #fff; cursor: pointer; font-size: 18px; }
+.sw-cat-slider .box-nav button:hover { background: var(--color-primary); color: var(--color-on-primary); border-color: var(--color-primary); }
+.sw-cat-slider .resp-viewport { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+.sw-cat-slider .resp-track { display: flex; }
+.sw-cat-slider .item { scroll-snap-align: start; padding-right: 15px; }
+.sw-cat-slider .item-wrap { border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: #fff; text-align: center; }
+.sw-cat-slider .item-image .ph { height: 170px; }
+.sw-cat-slider .item-content { padding: 10px 6px 14px; }
+.sw-cat-slider .item-content h3 { font-size: 14px; margin-bottom: 2px; }
+.sw-cat-slider .item-content p { font-size: 12px; color: var(--color-muted); }

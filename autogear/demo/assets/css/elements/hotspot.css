@@ -1,0 +1,7 @@
+/* hotspot.css — Flatsome [ux_hotspot] */
+.el-hotspot { position: relative; border-radius: var(--radius-md); overflow: hidden; max-width: 900px; }
+.el-hotspot .ph { height: 380px; font-size: 20px; }
+.el-pin { position: absolute; width: 34px; height: 34px; border-radius: 50%; background: var(--color-primary); color: var(--color-on-primary); border: 0; font-weight: 800; cursor: pointer; transform: translate(-50%, -50%); box-shadow: 0 0 0 6px rgba(253,184,25,.3); }
+.el-tip { position: absolute; transform: translate(-50%, calc(-100% - 14px)); background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; width: 200px; display: none; box-shadow: 0 12px 28px rgba(0,0,0,.15); z-index: 2; }
+.el-tip.open { display: block; }
+.el-tip strong { display: block; margin-bottom: 2px; }

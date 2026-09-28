@@ -1,0 +1,127 @@
+/* ============ global-colors.css ============
+ * Bộ GLOBAL cho template-demo/ (theo hệ CodyFrame v3, viết lại vanilla CSS).
+ * - Màu CHÍNH (primary): #fdb819 -> Hue 42, Sat ~98% (amber SEOVN), 5 nấc
+ * - Radius: xs 2px (bar/badge 2-3px) / sm 4px / base 6px / md 8px / lg 12px / full pill
+ * - Kèm accent, feedback, background, contrast + theme dark.
+ * Cách dùng: file đã được @import trong base.css nên mọi trang có sẵn.
+ * Trang tài liệu: globals.html (Colors + Radius + theme toggle).
+ * Dark mode: thêm data-theme="dark" vào thẻ <html>.
+ */
+
+:root, [data-theme="default"] {
+  /* main: SEOVN amber */
+  --color-primary-darker: hsl(42, 85%, 34%);
+  --color-primary-dark: hsl(42, 92%, 44%);
+  --color-primary: hsl(42, 98%, 54%); /* #fdb819 */
+  --color-primary-light: hsl(42, 98%, 63%);
+  --color-primary-lighter: hsl(42, 98%, 72%);
+
+  /* secondary: đỏ cam CTA */
+  --color-accent-darker: hsl(9, 78%, 34%);
+  --color-accent-dark: hsl(9, 82%, 41%);
+  --color-accent: hsl(9, 85%, 49%); /* #e63312 */
+  --color-accent-light: hsl(9, 88%, 58%);
+  --color-accent-lighter: hsl(9, 90%, 67%);
+
+  --color-black: hsl(230, 13%, 9%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* feedback */
+  --color-warning-darker: hsl(35, 79%, 48%);
+  --color-warning-dark: hsl(35, 79%, 56%);
+  --color-warning: hsl(35, 79%, 66%);
+  --color-warning-light: hsl(35, 79%, 74%);
+  --color-warning-lighter: hsl(35, 79%, 82%);
+
+  --color-success-darker: hsl(170, 78%, 26%);
+  --color-success-dark: hsl(170, 78%, 31%);
+  --color-success: hsl(170, 78%, 36%);
+  --color-success-light: hsl(170, 78%, 42%);
+  --color-success-lighter: hsl(170, 78%, 47%);
+
+  --color-error-darker: hsl(342, 89%, 38%);
+  --color-error-dark: hsl(342, 89%, 43%);
+  --color-error: hsl(342, 89%, 48%);
+  --color-error-light: hsl(342, 89%, 56%);
+  --color-error-lighter: hsl(342, 89%, 62%);
+
+  /* background */
+  --color-bg-darker: hsl(240, 4%, 90%);
+  --color-bg-dark: hsl(240, 4%, 95%);
+  --color-bg: hsl(0, 0%, 100%);
+  --color-bg-light: hsl(0, 0%, 100%);
+  --color-bg-lighter: hsl(0, 0%, 100%);
+
+  /* contrasts */
+  --color-contrast-lower: hsl(240, 4%, 85%);
+  --color-contrast-low: hsl(240, 4%, 65%);
+  --color-contrast-medium: hsl(225, 4%, 47%);
+  --color-contrast-high: hsl(230, 7%, 23%);
+  --color-contrast-higher: hsl(230, 13%, 9%);
+
+  /* radius: vuông (0) toàn site, giữ pill cho nút */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-full: 999px;
+
+  /* chữ trên nền primary (amber sáng -> dùng chữ tối cho đủ tương phản) */
+  --color-on-primary: hsl(230, 13%, 9%);
+}
+
+[data-theme="dark"] {
+  --color-primary-darker: hsl(42, 98%, 60%);
+  --color-primary-dark: hsl(42, 98%, 64%);
+  --color-primary: hsl(42, 98%, 69%);
+  --color-primary-light: hsl(42, 98%, 72%);
+  --color-primary-lighter: hsl(42, 98%, 76%);
+
+  --color-accent-darker: hsl(9, 85%, 41%);
+  --color-accent-dark: hsl(9, 85%, 47%);
+  --color-accent: hsl(9, 85%, 54%);
+  --color-accent-light: hsl(9, 85%, 60%);
+  --color-accent-lighter: hsl(9, 85%, 65%);
+
+  --color-black: hsl(230, 13%, 9%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-warning-darker: hsl(35, 79%, 48%);
+  --color-warning-dark: hsl(35, 79%, 56%);
+  --color-warning: hsl(35, 79%, 66%);
+  --color-warning-light: hsl(35, 79%, 74%);
+  --color-warning-lighter: hsl(35, 79%, 82%);
+
+  --color-success-darker: hsl(170, 78%, 26%);
+  --color-success-dark: hsl(170, 78%, 31%);
+  --color-success: hsl(170, 78%, 36%);
+  --color-success-light: hsl(170, 78%, 42%);
+  --color-success-lighter: hsl(170, 78%, 47%);
+
+  --color-error-darker: hsl(9, 85%, 41%);
+  --color-error-dark: hsl(9, 85%, 47%);
+  --color-error: hsl(9, 85%, 54%);
+  --color-error-light: hsl(9, 85%, 60%);
+  --color-error-lighter: hsl(9, 85%, 65%);
+
+  --color-bg-darker: hsl(232, 7%, 8%);
+  --color-bg-dark: hsl(233, 8%, 11%);
+  --color-bg: hsl(232, 11%, 15%);
+  --color-bg-light: hsl(233, 8%, 19%);
+  --color-bg-lighter: hsl(232, 7%, 22%);
+
+  --color-contrast-lower: hsl(240, 6%, 26%);
+  --color-contrast-low: hsl(240, 3%, 41%);
+  --color-contrast-medium: hsl(213, 3%, 57%);
+  --color-contrast-high: hsl(240, 5%, 82%);
+  --color-contrast-higher: hsl(240, 100%, 99%);
+
+  --color-on-primary: hsl(230, 13%, 9%);
+}
+
+/* helpers dùng nhanh */
+.bg-primary { background-color: var(--color-primary); color: var(--color-on-primary); }
+.text-primary { color: var(--color-primary-dark); }
+.bg-accent { background-color: var(--color-accent); color: var(--color-on-primary); }
+.text-accent { color: var(--color-primary-darker); } /* chữ trên nền sáng */

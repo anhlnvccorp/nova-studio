@@ -1,0 +1,9 @@
+/* sections.css — Flatsome [section]: full-width/boxed, background, padding */
+.el-sec { padding: 50px 0; }
+.el-sec--sm { padding: 25px 0; }
+.el-sec--lg { padding: 80px 0; }
+.el-sec--soft { background: var(--color-bg-soft); }
+.el-sec--dark { background: var(--color-dark); color: #fff; }
+.el-sec--img { background: linear-gradient(120deg, #2b2f38, #4a4f5c); color: #fff; }
+.el-boxed { max-width: 1000px; margin: 0 auto; border: 1px dashed var(--color-primary-dark); border-radius: var(--radius-md); padding: 30px; }
+.el-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary-darker); margin-bottom: 8px; }

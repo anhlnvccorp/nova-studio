@@ -1,0 +1,11 @@
+/* titles-dividers.css — Flatsome [title]/[divider] */
+.el-title { font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
+.el-title--center { text-align: center; }
+.el-title--line { position: relative; padding-left: 14px; }
+.el-title--line::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 5px; background: var(--color-primary); border-radius: var(--radius-xs); }
+.el-div { border: 0; border-top: 2px solid var(--color-border); margin: 18px 0; }
+.el-div--dashed { border-top-style: dashed; }
+.el-div--accent { border-top-color: var(--color-primary); }
+.el-div--grad { height: 3px; border: 0; background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary-light)); border-radius: var(--radius-xs); }
+.el-div--icon { display: flex; align-items: center; gap: 12px; color: #999; margin: 18px 0; }
+.el-div--icon::before, .el-div--icon::after { content: ""; flex: 1; border-top: 1px solid var(--color-border); }

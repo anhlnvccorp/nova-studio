@@ -1,0 +1,26 @@
+/* ============ colors.css ============
+ * Trang globals.html — tài liệu hệ global (Colors + Radius) kiểu CodyHouse Globals.
+ */
+.cl-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 26px 0 6px; }
+.cl-theme { display: flex; gap: 8px; }
+.cl-theme button { border: 1px solid var(--color-border); background: #fff; padding: 8px 16px; border-radius: var(--radius-full); cursor: pointer; font-size: 13px; font-weight: 600; }
+.cl-theme button.active { background: var(--color-dark); color: #fff; border-color: var(--color-dark); }
+.cl-group { margin: 26px 0; }
+.cl-group > h2 { font-size: 18px; margin-bottom: 4px; }
+.cl-group > p { color: var(--color-muted); font-size: 13px; margin-bottom: 12px; }
+.cl-anchor { font-size: 12px; color: var(--color-muted); }
+.cl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.cl-swatch { border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; background: #fff; }
+.cl-chip { height: 64px; }
+.cl-meta { padding: 8px 10px; font-size: 12px; }
+.cl-meta code { font-weight: 700; display: block; font-size: 12px; }
+.cl-meta .cl-hsl { color: var(--color-muted); }
+.cl-meta .cl-hex { font-weight: 600; }
+.cl-hsl-row { display: flex; gap: 6px; margin-top: 6px; }
+.cl-hsl-row span { flex: 1; background: var(--color-bg-soft); border-radius: var(--radius-sm); text-align: center; font-size: 11px; padding: 3px 0; }
+.cl-hsl-row small { display: block; font-size: 9px; color: var(--color-muted); text-transform: uppercase; }
+.cl-grad { height: 80px; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: flex; align-items: flex-end; padding: 10px; font-size: 12px; font-weight: 700; }
+/* radius showcase */
+.cl-radius-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.cl-radius-box { background: var(--color-primary); border: 1px solid var(--color-primary-dark); height: 72px; display: flex; align-items: flex-end; padding: 8px; font-size: 12px; font-weight: 700; }
+.cl-radius-box code { background: rgba(255,255,255,.75); padding: 1px 6px; border-radius: var(--radius-xs); }

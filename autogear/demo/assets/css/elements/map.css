@@ -1,0 +1,4 @@
+/* map.css — Flatsome [map] */
+.el-map { border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; }
+.el-map .ph { height: 340px; font-size: 18px; }
+.el-map__bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: 13px; color: #555; }

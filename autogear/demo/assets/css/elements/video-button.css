@@ -1,0 +1,4 @@
+/* video-button.css — Flatsome [ux_video_button] */
+.el-vbtn { position: relative; border-radius: var(--radius-md); overflow: hidden; min-height: 300px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2b2f38, #5a6070); cursor: pointer; border: 0; width: 100%; }
+.el-vbtn__play { width: 72px; height: 72px; border-radius: 50%; background: var(--color-primary); color: var(--color-on-primary); font-size: 26px; display: flex; align-items: center; justify-content: center; transition: transform .3s ease; }
+.el-vbtn:hover .el-vbtn__play { transform: scale(1.1); }

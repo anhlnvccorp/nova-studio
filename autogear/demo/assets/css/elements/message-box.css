@@ -1,0 +1,6 @@
+/* message-box.css — Flatsome [message_box] */
+.el-msg { border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 12px; font-size: 14px; border: 1px solid transparent; }
+.el-msg--success { background: #e8f7ee; border-color: #1a9e4b; color: #146c36; }
+.el-msg--info { background: #e8f1fc; border-color: #0693e3; color: #0b5a8e; }
+.el-msg--warning { background: #fff4e0; border-color: var(--color-primary-dark); color: #7a5200; }
+.el-msg--error { background: #fdeef0; border-color: #d6336c; color: #a11e4b; }

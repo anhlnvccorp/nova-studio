@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rows / Columns — Flatsome element (tĩnh)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/elements/rows-columns.css" />
+  <style>.demo-note{background:#fff8e6;border-bottom:1px solid #f0dfae;padding:10px 15px;font-size:13px;text-align:center}.el-h{font-size:15px;font-weight:700;margin:22px 0 10px}</style>
+</head>
+<body>
+  <script src="../assets/js/site-nav.js"></script>
+  <div class="demo-note">Element <b>Rows / Columns</b> — Flatsome: <code>[row] / [col]</code>. <a href="../elements.html">&larr; elements</a></div>
+  <!-- PORT: [row cols="N" gap="..." v_align="..."] [col span=".."] -->
+  <div class="container" style="padding:30px 15px">
+    <div class="el-h">[row cols="1"]</div><div class="el-row el-row--1"><div class="el-col">col 12/12</div></div>
+    <div class="el-h">[row cols="2"]</div><div class="el-row el-row--2"><div class="el-col">col 1</div><div class="el-col">col 2</div></div>
+    <div class="el-h">[row cols="3"]</div><div class="el-row el-row--3"><div class="el-col">col 1</div><div class="el-col">col 2</div><div class="el-col">col 3</div></div>
+    <div class="el-h">[row cols="4"]</div><div class="el-row el-row--4"><div class="el-col">1</div><div class="el-col">2</div><div class="el-col">3</div><div class="el-col">4</div></div>
+    <div class="el-h">[row cols="6"] — mobile xuống 2 cột</div><div class="el-row el-row--6"><div class="el-col">1</div><div class="el-col">2</div><div class="el-col">3</div><div class="el-col">4</div><div class="el-col">5</div><div class="el-col">6</div></div>
+    <div class="el-h">[row gap="narrow"] / [row gap="wide"]</div>
+    <div class="el-row el-row--3 el-row--narrow"><div class="el-col el-col--short">gap 6px</div><div class="el-col el-col--short">gap 6px</div><div class="el-col el-col--short">gap 6px</div></div>
+    <div class="el-row el-row--3 el-row--wide"><div class="el-col el-col--short">gap 30px</div><div class="el-col el-col--short">gap 30px</div><div class="el-col el-col--short">gap 30px</div></div>
+    <div class="el-h">[row v_align="middle"] — căn giữa theo chiều dọc</div>
+    <div class="el-row el-row--3 el-row--mid"><div class="el-col el-col--tall">cao</div><div class="el-col el-col--short">thấp (căn giữa)</div><div class="el-col">thường</div></div>
+  </div>
+</body>
+</html>
