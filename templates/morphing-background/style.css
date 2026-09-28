@@ -1,0 +1,149 @@
+/* -------------------------------- 
+File#: _1_morphing-background
+Title: Morphing Background
+Descr: A morphing background item that transitions from one element's position to another's
+Usage: codyhouse.co/license
+-------------------------------- */
+
+/* reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: system-ui, sans-serif;
+  color: hsl(230, 7%, 23%);
+  font-size: 1.125rem;
+  line-height: 1.4;
+  padding: 3rem 1rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: hsl(230, 13%, 9%);
+  font-weight: 700;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2.125rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.375rem; }
+
+ol, ul, menu { list-style: none; }
+
+button, input, textarea, select {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+
+a { color: hsl(250, 84%, 54%); }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------
+Component 
+-------------------------------- */
+.morph-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 1px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform-origin: left top;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.morph-bg--visible { opacity: 1; }
+
+.morph-bg--has-transition {
+  transition: 0.3s;
+  will-change: transform, border-radius, height, width;
+}
+
+/* -------------------------------- 
+Demo style 
+-------------------------------- */
+.demo-morph-bg-paragraph {
+  font-size: 0.9375rem;
+  color: hsl(240, 4%, 65%);
+}
+
+.demo-morph-bg-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.demo-morph-bg-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: hsl(230, 13%, 9%);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.demo-morph-bg-target {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.demo-morph-bg-button {
+  border-radius: 50em;
+  font-weight: 500;
+  cursor: pointer;
+  color: hsl(230, 13%, 9%);
+  padding: 0.75rem 1rem;
+}
+
+.demo-morph-bg-1 { background-color: hsl(250, 84%, 54%); }
+.demo-morph-bg-2 { background-color: hsl(240, 4%, 90%); }
+
+/* -------------------------------- 
+Utilities 
+-------------------------------- */
+.cd-block { display: block; }
+.cd-position-relative { position: relative; }
+.cd-z-index-1 { z-index: 1; }
+.cd-z-index-2 { z-index: 2; }
+.cd-margin-bottom-sm { margin-bottom: 1.5rem; }
+.cd-margin-bottom-xl { margin-bottom: 4.5rem; }
+.cd-text-center { text-align: center; }
+
+/* extra: page layout */
+.container { max-width: 800px; margin: 0 auto; }
+.page-title { margin-bottom: 3rem; }
+.page-title p { color: hsl(240,4%,65%); margin-top: .5rem; }
